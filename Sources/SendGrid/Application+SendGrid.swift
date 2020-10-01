@@ -75,10 +75,10 @@ extension Application {
 
 
 extension HTTPClient {
-    func sendGridDelegating(to eventLoop: EventLoop, conf: SendGridCondiguration)
+    func sendGridDelegating(to eventLoop: EventLoop, conf: SendGridConfiguration)
     -> SendGridClient {
         
-        return SendGridClient( http: self, eventLoop: eventLoop, hydraConfig: conf)
+        return SendGridClient( http: self, eventLoop: eventLoop, config: conf)
     }
 }
     

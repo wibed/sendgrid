@@ -1,6 +1,11 @@
 import Vapor
 
 extension SendGridClient: Client {
+    public func delegating(to eventLoop: EventLoop) -> Client {
+        SendGridClient(
+            http: self.http, eventLoop: eventLoop, config: self.config)
+    }
+    
     public func send(_ request: ClientRequest) -> EventLoopFuture<ClientResponse> {
         do {
             let httpRequest = try HTTPClient.Request(url: request.url.string,

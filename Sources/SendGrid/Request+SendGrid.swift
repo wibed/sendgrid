@@ -3,7 +3,7 @@ import SendGridKit
 
 
 extension Request {
-    var sendgrid: SendGridClient {
+    public var sendgrid: SendGridClient {
         application.sendGridClients.http.delegating(to: self.eventLoop)
     }
 }

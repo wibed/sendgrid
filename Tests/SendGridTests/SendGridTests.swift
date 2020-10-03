@@ -14,4 +14,11 @@ class SendGridTests: XCTestCase {
     func testNothing() {
         XCTAssertTrue(true)
     }
+    
+    func testSome() {
+        let app = Application()
+        defer { app.shutdown() }
+        
+        app.http.client
+    }
 }

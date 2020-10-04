@@ -54,7 +54,7 @@ extension Application {
             typealias Value = SendGridConfiguration
         }
         
-        var configuration: SendGridConfiguration? {
+        public var configuration: SendGridConfiguration? {
             get {
                 self.application.storage[ConfigurationKey.self]
             }

@@ -28,7 +28,7 @@ extension Application {
         
         let application: Application
         
-        var http: SendGridClient {
+        public var http: SendGridClient {
             guard let config = self.application.sendGridClients.configuration else {
                 fatalError("SendGridClient has not been configured. Use app.sendGridClients.configuration = ...")
             }
